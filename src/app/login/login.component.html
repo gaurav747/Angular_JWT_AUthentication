@@ -1,0 +1,47 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">
+            Login Page
+        </mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="form-div" [formGroup]="form" (ngSubmit)="loginUser()">
+            <mat-form-field>
+                <input matInput type="text" placeholder="username" formControlName="username">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" placeholder="type" formControlName="type">
+            </mat-form-field>
+            <button mat-raised-button type="submit" [disabled]="!form.valid">
+                Login </button>
+        </form>
+
+    </mat-card>
+
+
+    <!-- 
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">
+            Registration Page
+        </mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="form-div" [formGroup]="formGroup"
+            (ngSubmit)="registerUser()">
+            <mat-form-field>
+                <input matInput placeholder="Mobile" formControlName="mobile">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="email" placeholder="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Fullname" formControlName="Fullname">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <button mat-raised-button type="submit">
+                Register
+            </button>
+        </form>
+    </mat-card> -->
+</div>

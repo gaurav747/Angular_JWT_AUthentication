@@ -1,0 +1,26 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">
+            Registration Page
+        </mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="form-div" [formGroup]="form" (ngSubmit)="registerUser()">
+            <mat-form-field>
+                <input matInput placeholder="fullname" formControlName="fullname">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="email" placeholder="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="tel" placeholder="mobile" formControlName="mobile">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="password" formControlName="password">
+            </mat-form-field>
+            <button mat-raised-button type="submit" [disabled]="!form.valid">
+                Register
+            </button>
+            <br>
+            <button mat-raised-button (click)="login()">Login</button>
+        </form>
+
+    </mat-card>
